@@ -13,7 +13,13 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <main.class>servicenow.common.datamart.Loader</main.class>
   </properties>
-  
+  <repositories>
+    <repository>
+      <id>clojars</id>
+      <name>clojars</name>
+      <url>http://clojars.org/repo/</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -32,19 +38,6 @@
       <optional>true</optional>
     </dependency>
     <dependency>
-      <!--
-        to add ojdbc6 to local repo
-          mvn install:install-file -Dfile=ojdbc6.jar
-          -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=12.1.0.2
-          -Dpackaging=jar -DgeneratePom=true 
-        -->
-      <groupId>com.oracle</groupId>
-      <artifactId>ojdbc6</artifactId>
-      <version>12.1.0.2</version>
-      <scope>compile</scope>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
        <!--
         to add sqljdbc4 to local repo
           mvn install:install-file -Dfile=sqljdbc42.jar
@@ -52,8 +45,8 @@
           -Dpackaging=jar -DgeneratePom=true 
         -->
       <groupId>com.microsoft.sqlserver</groupId>
-      <artifactId>sqljdbc</artifactId>
-      <version>4.2</version>
+      <artifactId>sqljdbc4</artifactId>
+      <version>4.0</version>
       <scope>compile</scope>
       <optional>true</optional>
     </dependency>
