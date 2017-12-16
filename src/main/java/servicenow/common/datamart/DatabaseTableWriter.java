@@ -284,9 +284,18 @@ public class DatabaseTableWriter {
 		// If the SQL type is VARCHAR, then check for an over-size value
 		// and truncate if necessary
 		if (sqltype == Types.VARCHAR || sqltype == Types.CHAR) {
-			int oldSize = value.length();
+			int oldSize = value.length(); 
 			int maxSize = d.getSize();
-			if (value.length() > maxSize) {
+			if ( "mysql|mssql".contains(generator.getDialect()) ) {
+				// This is a modification to handle oversized values. The size
+				// of a column isn't constrained by max_length  (╯°^°）╯︵ ┻━┻
+				// TODO: Make these numbers configurable variable, since it needs 
+				//   to align with sqltemplates.xml
+				if (value.length() > 1000 && d.getSize() <= 510) {
+					value = value.substring(0,  1000);
+				}
+			}
+			else if (value.length() > maxSize) {
 				value = value.substring(0,  maxSize);
 			}
 			if (generator.getDialect().equals("oracle2")) {

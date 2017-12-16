@@ -386,8 +386,8 @@ WHERE sys_id = $keyvalue</update>
     </templates>
     <datatypes>
       <!-- Character types -->
-      <typemap glidetype="string" maxsize="3999">VARCHAR(#)</typemap>
-      <typemap glidetype="string" minsize="4000">BLOB</typemap>
+      <typemap glidetype="string" maxsize="510">VARCHAR(1000)</typemap>
+      <typemap glidetype="string" minsize="511">BLOB</typemap>
       <!-- Numeric types -->
       <typemap glidetype="boolean"         >BOOLEAN</typemap>
       <typemap glidetype="integer"         >INTEGER</typemap>
@@ -411,8 +411,8 @@ WHERE sys_id = $keyvalue</update>
       <typemap glidetype="glide_duration"  >INTEGER</typemap>
       <typemap glidetype="timer"           >INTEGER</typemap>
       <!-- Wildcard templates must appear last -->
-      <typemap glidetype="*" maxsize="3999">VARCHAR(#)</typemap>
-      <typemap glidetype="*" minsize="4000">BLOB</typemap>
+      <typemap glidetype="*" maxsize="510">VARCHAR(1000)</typemap>
+      <typemap glidetype="*" minsize="511">BLOB</typemap>
     </datatypes>
     <fieldnames>
       <!-- not required if using quotes -->
@@ -451,8 +451,8 @@ where [sys_id] = $keyvalue</update>
     </templates>
     <datatypes>
       <!-- Character types -->
-      <typemap glidetype="string" maxsize="3999">varchar(#)</typemap>
-      <typemap glidetype="string" minsize="4000">varchar(max)</typemap>
+      <typemap glidetype="string" maxsize="510">varchar(1000)</typemap>
+      <typemap glidetype="string" minsize="511">varchar(max)</typemap>
       <!-- Numeric types -->
       <typemap glidetype="boolean"         >tinyint</typemap>
       <typemap glidetype="integer"         >int</typemap>
@@ -476,8 +476,8 @@ where [sys_id] = $keyvalue</update>
       <typemap glidetype="glide_duration"  >int</typemap>
       <typemap glidetype="timer"           >int</typemap>
       <!-- Wildcard templates must appear last -->
-      <typemap glidetype="*" maxsize="3999">varchar(#)</typemap>
-      <typemap glidetype="*" minsize="4000">varchar(max)</typemap>
+      <typemap glidetype="*" maxsize="510">varchar(1000)</typemap>
+      <typemap glidetype="*" minsize="511">varchar(max)</typemap>
     </datatypes>
     <fieldnames/>
   </sql>  
