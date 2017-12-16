@@ -412,7 +412,7 @@ WHERE sys_id = $keyvalue</update>
       <typemap glidetype="timer"           >INTEGER</typemap>
       <!-- Wildcard templates must appear last -->
       <typemap glidetype="*" maxsize="510">VARCHAR(1000)</typemap>
-      <typemap glidetype="*" minsize="511">BLOB</typemap>
+      <typemap glidetype="*" >BLOB</typemap>
     </datatypes>
     <fieldnames>
       <!-- not required if using quotes -->
@@ -477,7 +477,7 @@ where [sys_id] = $keyvalue</update>
       <typemap glidetype="timer"           >int</typemap>
       <!-- Wildcard templates must appear last -->
       <typemap glidetype="*" maxsize="510">varchar(1000)</typemap>
-      <typemap glidetype="*" minsize="511">varchar(max)</typemap>
+      <typemap glidetype="*" >varchar(max)</typemap>
     </datatypes>
     <fieldnames/>
   </sql>  

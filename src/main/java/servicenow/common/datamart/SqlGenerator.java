@@ -186,9 +186,7 @@ public class SqlGenerator {
 			Element ele = alltypes.next();
 			String attr = ele.getAttributeValue("glidetype");
 			if (attr.equals(glidetype) || attr.equals("*")) {
-				String minsize = ele.getAttributeValue("minsize");
 				String maxsize = ele.getAttributeValue("maxsize");
-				if (minsize != null && size < Integer.parseInt(minsize)) continue;
 				if (maxsize != null && size > Integer.parseInt(maxsize)) continue;
 				sqltype = ele.getTextTrim();
 				if (sqltype.indexOf("#") > -1)
