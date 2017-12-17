@@ -37,16 +37,11 @@
       <scope>compile</scope>
       <optional>true</optional>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
     <dependency>
-       <!--
-        to add sqljdbc4 to local repo
-          mvn install:install-file -Dfile=sqljdbc42.jar
-          -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc -Dversion=4.2
-          -Dpackaging=jar -DgeneratePom=true 
-        -->
       <groupId>com.microsoft.sqlserver</groupId>
-      <artifactId>sqljdbc4</artifactId>
-      <version>4.0</version>
+      <artifactId>mssql-jdbc</artifactId>
+      <version>6.2.2.jre8</version>
       <scope>compile</scope>
       <optional>true</optional>
     </dependency>
